@@ -1,6 +1,6 @@
-public class arrayOperations {
+public class arrayBinarySearch {
     public static void main(String[] args) {
-        int [] arr1 = {834729, 192837, 564738, 918273, 374829, 827364, 192746, 564829, 918374, 273645,
+        int []  arr = {834729, 192837, 564738, 918273, 374829, 827364, 192746, 564829, 918374, 273645,
 746382, 918273, 564738, 129384, 847362, 293847, 746291, 918234, 564920, 374650,
 918273, 564738, 192837, 847362, 293847, 746291, 918234, 564920, 374650, 827364,
 192746, 564829, 918374, 273645, 746382, 918273, 564738, 129384, 847362, 293847,
@@ -11,36 +11,15 @@ public class arrayOperations {
 746382, 573829, 184736, 927364, 736291, 482937, 193746, 746382, 564920, 918273,
 374829, 827364, 192746, 564829, 918374, 273645, 746382, 918273, 564738, 129384
 };
-        int n = arr1.length;
-        int target = 1;
-        boolean isFound = false;
-    // Traversing
-    for(int i = 0; i < n ; i++){
-        System.out.print(arr1[i] + " ");
-    }
-    // Searching
-    System.out.println();
-    for(int i = 0; i < n ; i++ ){
-        if (arr1[i]== target) {
-            isFound = true;
-            
-        }
-
-    }
-    if (isFound == true) {
-        System.out.println("Target is present in array!");
+int n = arr.length;
+int mid = arr.length / 2;
+int target = 129384;
+for(int i=0;i<n;i++){
+    if (target<mid) {
+        i = mid;
+        n=mid;
         
     }
-    else  {
-        System.out.println("Target Not Present!!!");
-        
-    }
-
-    //2-D Array
-    int [][] arr2 = {
-        {1,2,3},
-        {4,5,6},
-        {7,8,9} };
-    System.out.println(arr2[2][2]);
+}
     }
 }
